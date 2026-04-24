@@ -1,5 +1,6 @@
 const express = require("express")
 const userModel = require("../models/user.model")
+const jwt = require("jsonwebtoken")
 
 const authRouter = express.Router() // This is used when we want to create api in file other than app.js
 
@@ -15,8 +16,15 @@ authRouter.post("/register",async(req,res)=>{
     const user = await userModel.create({
         name,email,password
     })
+    const token = jwt.sign(
+        {
+            id : user._id,
+            email : user.email,
+        },
+        process.env.JWT_SECRET
+    )
     res.status(201).json({
-        message : "User registered successfully..",user
+        message : "User registered successfully..",user,token
     })
 })
 module.exports = authRouter

@@ -1,0 +1,18 @@
+Authentication => Ye identify karna ki request kis user ne bheji hai.
+                  Suppose hamare paas 3 user hain aur ek server (users -> A,B,C).jab hamara user server ko request(register) karta hai 
+                  pehli baar toh usey kuch data provide karna pdta hai like name ,email,password etc,toh hamara server iss data ko DB 
+                  mein store karta hai..aur iss data ke basis pe token generate karta hai aur yhi token uss user ko de deta hai.
+                  ab ek rule hai..ki token milne ke baad user jitni baar bhi request karta hai server ko usey utni hi baar token send
+                  karna pdta hai Aur fir isi toek ki help se server identigy karta hai ki request kis user ne bheji hai.
+                  Token generate karte waqt server tekn par signature karta hai(JWT_SECRET) taaki pta chal ske ki ye token use server 
+                  dwara generate kiya gya hai.
+                  ex-> agar A,B,C ne req bheji toh server token ki help se identify kar lega ki konsi req kis user ne ki hai..
+
+
+Authorization => ye pta karna ki ek user ko kya kya karne ki permission hai.
+
+
+Validation => Input data ka format check karna.
+
+
+Verification => Actual data shi ha ya nhi ye check karna.

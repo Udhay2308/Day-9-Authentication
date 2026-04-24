@@ -9,6 +9,11 @@ Authentication => Ye identify karna ki request kis user ne bheji hai.
                   ex-> agar A,B,C ne req bheji toh server token ki help se identify kar lega ki konsi req kis user ne ki hai..
 
 
+                  server jab token create karta hai toh uss token ko brower ki cookie storage mein store kar deta hai..kyunki 
+                  browser(user-side) ki cookie storage ko server control karta hai..aur jab bhi user agli baar request karta hai toh 
+                  server cookie storage se token ko access kar leta hai. 
+
+
 Authorization => ye pta karna ki ek user ko kya kya karne ki permission hai.
 
 

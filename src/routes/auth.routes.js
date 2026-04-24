@@ -23,6 +23,7 @@ authRouter.post("/register",async(req,res)=>{
         },
         process.env.JWT_SECRET
     )
+    res.cookie("Jwt_token",token)
     res.status(201).json({
         message : "User registered successfully..",user,token
     })

@@ -26,3 +26,6 @@ Verification => Actual data shi ha ya nhi ye check karna.
 Controller => the function that gets executed when a specific
               API route receives a request, and it decides how 
               to handle that request and what response to send back. 
+
+=> Hum password ko safe rakhne ke liye hashing ka use karte hai...hum plain text ko random code mein convert kar sakte hain using hashing
+   lekin ise hum reverse nhi kar skate..islye ek one way process hai..

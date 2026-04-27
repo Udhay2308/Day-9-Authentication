@@ -21,3 +21,8 @@ Validation => Input data ka format check karna.
 
 
 Verification => Actual data shi ha ya nhi ye check karna.
+
+
+Controller => the function that gets executed when a specific
+              API route receives a request, and it decides how 
+              to handle that request and what response to send back. 
